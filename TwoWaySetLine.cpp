@@ -10,13 +10,13 @@ TwoWaySetLine::TwoWaySetLine() {
 	}
 
 	for (int index = 0; index < 19; ++index) {
-			TAG0[index] = 0;
-			TAG1[index] = 0;
+		tag0[index] = 0;
+		tag1[index] = 0;
 	}
 
 	for (int index = 0; index < 256; ++index) {
-			DATOS0[index] = 0;
-			DATOS1[index] = 0;
+		data0[index] = 0;
+		data1[index] = 0;
 	}
 }
 
@@ -29,21 +29,21 @@ void TwoWaySetLine::printAll() {
 	cout << "LRU 0: " << LRU0 << endl;
 
 	cout << "MESI 0: ";
-	for (int index = 0; index < 2; ++index) {
+	for (int index = 0; index < 2; ++index) 
 		cout << MESI0[index] << "   ";
-	}
+	
 	cout << endl;
 
-	cout << "TAG 0: ";
-	for (int index = 0; index < 19; ++index) {
-		cout << TAG0[index] << "   ";
-	}
+	cout << "tag 0: ";
+	for (int index = 0; index < 19; ++index) 
+		cout << tag0[index] << "   ";
+	
 	cout << endl;
 
-	cout << "DATOS 0: ";
-	for (int index = 0; index < 256; ++index) {
-			cout << DATOS0[index] << "   ";
-	}
+	cout << "data 0: ";
+	for (int index = 0; index < 256; ++index) 
+		cout << data0[index] << "   ";
+	
 	cout << endl;
 
 }

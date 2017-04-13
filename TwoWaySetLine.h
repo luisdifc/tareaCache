@@ -14,11 +14,11 @@ public:
     int MESI0 [2];
     int MESI1 [2];
 
-    int TAG0 [19];
-    int TAG1 [19];
+    int tag0 [19];
+    int tag1 [19];
 
-    int DATOS0 [256];
-    int DATOS1 [256];
+    int data0 [256];
+    int data1 [256];
 
 public:
     TwoWaySetLine();
