@@ -1,13 +1,20 @@
 Si la memoria caché L1 va a ser local para cada CPU, eso significa entonces que la coherencia la debemos de mantener par la caché L2 que es compartida?
+->Si
 
 En el enunciado dice "Bloques de 32 B" con eso se refiere a 32 bytes o 32 bits?
+->Bytes
 
 Ahora los bloques son de este tamaño, a cuánto se direccionar?
+->Tomamos nosotros la decision, Nosotros tambien tomamos la decision sobre el tamano de la direccion. Probablemente serian para mips.
 
 A la hora de realizar una escritura, cómo dato guardo la dirección de memoria referida para la escritura o nos van a pasar un dato en específico?
+->Solo saber si hubo exito o no. 
 
 Para la implementación, además de las memorias caché y los CPU's, debemos entonces también crear una memoria princial para la simulación correcta de todo el programa?
+->
 
 Los tamaños de caché que proveen son solo da la parte de datos del caché o son de la totalidad del caché?
+->Tomarlo como queramos, pero especificarlas.
 
 En cuanto a la ejecución del programa supongo que debemos de correr cada CPU en paralelo o corremos las instrucciones de manera serial (3 del cpu1 y 1 del cpu2)?
+->Se puede emular la paralelidad haciendolo serialmente
