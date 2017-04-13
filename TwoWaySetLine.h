@@ -11,14 +11,14 @@ public:
     int LRU0;
     int LRU1;
 
-    int MESI0 [2];
-    int MESI1 [2];
+    int* MESI0;
+    int* MESI1;
 
-    int tag0 [19];
-    int tag1 [19];
+    int* tag0;
+    int* tag1;
 
-    int data0 [256];
-    int data1 [256];
+    int* data0;
+    int* data1;
 
 public:
     TwoWaySetLine();

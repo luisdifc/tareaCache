@@ -69,3 +69,65 @@ int* Translator::HexToBin(string Hex) {
     }
     return binDir;
 }
+
+int* Translator::L1Tag (int* dir) {
+	int* cacheTag = new int[19];
+
+	for (int index = 0; index < 19; ++ index)
+		cacheTag[index] = dir[index];
+	return cacheTag;
+}
+
+int* Translator::L1Index (int* dir) {
+	int* cacheIndex = new int[8];
+
+	for (int index = 19; index < 27; ++ index)
+		cacheIndex[index - 19] = dir[index];
+	return cacheIndex;
+}
+
+int* Translator::L1Offset (int* dir) {
+	int* cacheOffset = new int[5];
+
+	for (int index = 27; index < 32; ++ index)
+		cacheOffset[index - 27] = dir[index];
+	return cacheOffset;
+}
+
+int* Translator::L2Tag (int* dir) {
+	int* cacheTag = new int[15];
+
+	for (int index = 0; index < 15; ++ index)
+		cacheTag[index] = dir[index];
+	return cacheTag;
+}
+
+int* Translator::L2Index (int* dir) {
+	int* cacheIndex = new int[12];
+
+	for (int index = 15; index < 27; ++ index)
+		cacheIndex[index - 15] = dir[index];
+	return cacheIndex;
+}
+
+int* Translator::L2Offset (int* dir) {
+	int* cacheOffset = new int[5];
+
+	for (int index = 27; index < 32; ++ index)
+		cacheOffset[index - 27] = dir[index];
+	return cacheOffset;
+}
+
+int Translator::binToDec (int* binary, int size) {
+	int decimalResult = 0;
+	for (int index = 0; index < size; ++index)
+		decimalResult += binary[(size - 1) - index] * (int) pow(2, index);
+	return decimalResult;
+}
+
+int Translator::tagComparator (int* cacheTag, int* dirTag, int size) {
+	int compare = 0; 
+	if (binToDec(cacheTag, size) == binToDec(dirTag, size))
+		compare = 1;
+	return compare;
+}
