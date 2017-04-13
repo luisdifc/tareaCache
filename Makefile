@@ -4,7 +4,7 @@ build:
 	g++ -std=c++11 -o main *.cpp
 	
 run:
-	./main
+	./main prueba.txt
 
 clean:
 	rm main
