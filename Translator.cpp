@@ -40,6 +40,12 @@ void Translator::closeFile(char* fileName) {
 	dataFile.close(); //se cierra el archivo ya que no se ocupa mas
 }
 
+int Translator::writeOrRead (string line) {
+	int write = 0;
+	if (line[11] == 'S')
+		write = 1;
+	return write;
+}
 
 int* Translator::HexToBin(string Hex) {
 	int* binDir = new int[32];

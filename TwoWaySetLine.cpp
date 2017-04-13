@@ -40,21 +40,20 @@ TwoWaySetLine::~TwoWaySetLine() {
 
 void TwoWaySetLine::printAll() {
 	
-	cout << "LRU 0: " << LRU0 << endl;
+	cout << "LRU: " << LRU0 << endl;
 
-	cout << "MESI 0: ";
+	cout << "MESI: ";
 	for (int index = 0; index < 2; ++index) 
-		cout << MESI0[index] << "   ";
+		cout << MESI0[index];
 	
 	cout << endl;
 
-	cout << "tag 0: ";
+	cout << "tag: ";
 	for (int index = 0; index < 19; ++index) 
-		cout << tag0[index] << "   ";
-	
+		cout << tag0[index];
 	cout << endl;
 
-	cout << "data 0: ";
+	cout << "Data blocks: ";
 	for (int index = 0; index < 256; ++index) {
 		if (index %8 == 0) {
 			cout << "\n";

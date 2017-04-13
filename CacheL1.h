@@ -17,6 +17,7 @@ public:
     CacheL1();
     virtual ~CacheL1();
     void write (int* dir);
+    void read (int* dir);
 
 };
 

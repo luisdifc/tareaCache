@@ -9,8 +9,8 @@ class MPLine {
 
 public:
     int valid, dirty;
-    int tag [19];
-    int data [256];
+    int* tag;
+    int* data;
 
 public:
     MPLine();

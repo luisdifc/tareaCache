@@ -31,6 +31,7 @@ public:
     int* L2Index (int* dir);
     int* L2Offset (int* dir);
     int tagComparator (int* cacheTag, int* dirTag, int size);
+    int writeOrRead (string line);
 };
 
 #endif /* TRANSLATOR_H */
