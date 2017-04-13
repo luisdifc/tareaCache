@@ -21,8 +21,8 @@ public:
     void openFile (char* fileName);
     string readLine (char* fileName);
     void closeFile (char* fileName);
+    int* HexToBin(char Hex, int* bin);
 
 };
 
 #endif /* TRANSLATOR_H */
-
