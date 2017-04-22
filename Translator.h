@@ -32,6 +32,7 @@ public:
     int* L2Offset (int* dir);
     int tagComparator (int* cacheTag, int* dirTag, int size);
     int writeOrRead (string line);
+    char binToMesi (int* mesi);
 };
 
 #endif /* TRANSLATOR_H */

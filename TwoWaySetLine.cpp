@@ -2,7 +2,7 @@
 
 TwoWaySetLine::TwoWaySetLine() {
 	LRU0 = 0;
-	LRU1 = 0;
+	LRU1 = 1;
 
 
 	MESI0 = new int[2];
