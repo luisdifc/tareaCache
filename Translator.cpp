@@ -22,13 +22,13 @@ Translator::~Translator() {
 //     dataFile.close(); //se cierra el archivo ya que no se ocupa mas
 // }
 
-void Translator::openFile(char* fileName) {
+void Translator::openFile(char* fileName, ifstream& dataFile) {
     //se abre el archivo con las direcciones
     //ifstream dataFile;
     dataFile.open(fileName);
 }
 
-string Translator::readLine(char* fileName) {
+string Translator::readLine(char* fileName, ifstream& dataFile) {
 	string line;
 	if (dataFile.is_open() && !dataFile.eof())
 		getline(dataFile, line);
@@ -36,7 +36,7 @@ string Translator::readLine(char* fileName) {
 	return line;
 }
 
-void Translator::closeFile(char* fileName) {
+void Translator::closeFile(char* fileName, ifstream& dataFile) {
 	dataFile.close(); //se cierra el archivo ya que no se ocupa mas
 }
 

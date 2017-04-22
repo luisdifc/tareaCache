@@ -12,16 +12,16 @@ class Translator {
 
 public:
     //string line;
-    ifstream dataFile;
+    // ifstream dataFile;
 
 public:
     Translator();
     virtual ~Translator();
 
     //void reader(char* fileName);
-    void openFile (char* fileName);
-    string readLine (char* fileName);
-    void closeFile (char* fileName);
+    void openFile (char* fileName, ifstream& dataFile);
+    string readLine (char* fileName, ifstream& dataFile);
+    void closeFile (char* fileName, ifstream& dataFile);
     int binToDec (int* binary, int size);
     int* HexToBin(string Hex);
     int* L1Tag (int* dir);

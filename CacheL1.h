@@ -26,6 +26,7 @@ public:
     void read ();
     char mesiState (int* dir);
     void L2WriteL1 (MPLine* L2Line, int* dir, int bloque);
+   // void protocolo (CacheL1* cache0, CacheL1* cache1, CacheL2* shared, int* dir);
 };
 
 #endif /* CACHEL1_H */
