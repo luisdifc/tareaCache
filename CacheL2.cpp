@@ -15,12 +15,12 @@ int CacheL2::read (int* dir) {
 	int* tag = trans.L2Tag(dir);
 
 	if (trans.tagComparator(this->memory[index].tag, tag, this->tagSize) && this->memory[index].valid) {
-		cout << "Miss en cache L1, Hit en cache L2!!" << endl;
+		cout << "Hit en cache L2!!" << endl;
 		result = 1;
 		this->hits++;
 	}
 	else {
-		cout << "Miss en cache L1, Miss en cache L2!!" << endl;
+		cout << "Miss en cache L2!!" << endl;
 		this->misses++;
 	}
 	return result;
