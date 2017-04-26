@@ -23,6 +23,7 @@ public:
     virtual ~CacheL2();
 
     int read (int* dir);
+    void blockFromMemory (int* dir);
 
 };
 

@@ -25,3 +25,12 @@ int CacheL2::read (int* dir) {
 	}
 	return result;
 }
+
+void CacheL2::blockFromMemory (int* dir) {
+    int index = trans.binToDec(trans.L2Index(dir), this->indexSize);    
+    int* tag = trans.L2Tag(dir);
+
+    this->memory[index].tag = tag;
+    for (int i = 0; i < 256; ++i)
+			this->memory[index].data[i] = 1;
+}
