@@ -25,7 +25,6 @@ void CacheL1::writeExistenTag (int currentIndexL1, int currentTagL1, int current
 }
 
 void CacheL1::read (int tag, int index) {
-	cout << "El dato esta en Cache L1, hay un HIT!";
 	this->hits++;
 	if (trans.binToDec(this->memory[index].tag0, this->tagSize) == tag) {
 		this->memory[index].LRU0 = 1;
@@ -128,21 +127,25 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 	int currentTagL2 = trans.binToDec(trans.L2Tag(binDir), shared->tagSize);
 	int currentOffset = trans.binToDec(trans.L1Offset(binDir), 5);
 
-	cout << "MESI state: " <<mesiState << endl;
+	cout << "MESI state: " << mesiState << endl;
 
 	if (read) {
+		//cout << "LECTURA" << endl;
 		if (mesiState == 'E' || mesiState == 'S' || mesiState == 'M') {
+			cout << "Hit en cache L1!!" << endl;
 			this->read(currentTagL1, currentIndexL1);
 		} else { //Serian los casos 'N' o 'I'. Tengo que traerlo de L2 o de mem
 			//verificar si el tag esta en el otro cache y que estado tiene
+			cout << "Miss en cache L1!!" << endl;
 			this->misses++;
-			cout << "Miss de cache nivel 1..." << endl;
 			//si no esta en el otro cache
 			if (mesiStateOtherCache == 'N' || mesiStateOtherCache == 'I'){ //buscarlo en L2
 				if (shared->read(binDir)) { //si lo encuentra en L2. Traer bloque a L1
+					cout << "Hit en cache L2!!" << endl;
 					shared->hits++;
                     this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'E');
 				} else { //Hay un miss en el shared Hay que traer el dato de memoria principal
+                    cout << "Miss en cache L2!!" << endl;
                     shared->misses++;
                     shared->blockFromMemory(binDir);
                     this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'E');
@@ -156,9 +159,11 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 
 				//Traer el dato al cache en cuestion y lo pongo en estado Shared
 				if (shared->read(binDir)) { //si lo encuentra en L2. Traer bloque a L1
+					cout << "Hit en cache L2!!" << endl;
 					shared->hits++;
                     this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'S');
 				} else { //Hay un miss en el shared Hay que traer el dato de memoria principal
+                    cout << "Miss en cache L2!!" << endl;
                     shared->misses++;
                     shared->blockFromMemory(binDir);
                     this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'S');
@@ -166,7 +171,8 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 			} else if (mesiStateOtherCache == 'M') { //Esta en el otro caché en estado Modified.
 				//Lo escribo en memoria principal
 				shared->write(currentIndexL2, trans.L2Tag(binDir), &cache1->memory[currentIndexL1], currentTagL1, cache1->tagSize);
-
+				cout << "Miss en cache L2!!" << endl;
+                shared->misses++;
 				//Paso su estado a Shared en other caché
 				tempTag = trans.binToDec(cache1->memory[currentIndexL1].tag0, cache1->index);
 				if(tempTag == currentTagL1)
@@ -177,15 +183,12 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 				//Traigo el dato al cache en cuestion y lo pongo en estado Shared
 				if (shared->read(binDir)) { //si lo encuentra en L2. Traer bloque a L1
 					this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'S');
-				} else { //Hay un miss en el shared Hay que traer el dato de memoria principal
-                    shared->misses++;
-                    shared->blockFromMemory(binDir);
-                    this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'E');
-				}
+				} 
 			}
 		}
 	}
 	else { //write
+		//cout << "ESCRITURA" << endl;
 		if (mesiState == 'E') {
 			//Escribo el dato en el caché.
 			this->writeExistenTag(currentIndexL1, currentTagL1, currentOffset);
@@ -231,8 +234,11 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 			//Traigo el bloque de L2 al L1
 			if (shared->read(binDir)) { //si lo encuentra en L2. Traer bloque a L1
 				this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'S');
+				cout << "Hit en cache L2, escritura" << endl;
+                shared->hits++;
 			} else { //Hay un miss en el shared Hay que traer el bloque de memoria principal
                 shared->blockFromMemory(binDir);
+                cout << "Miss en cache L2, escritura" << endl;
                 shared->misses++;
                 this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'I');
 			}

@@ -32,7 +32,8 @@ int main(int argc, char** argv) {
         //leemos las lineas de ambos cores "en paralelo"
         if (index % 4 != 0){
             line = trans.readLine(argv[1], dataFile1);
-            cout << "File line to be processed: " <<line << endl;
+            cout << "Core 1 working..." << endl;
+            cout << "File line to be processed: " << line << endl;
 
             binDir = trans.HexToBin(line);
             cout << "Memory Address: ";
@@ -41,13 +42,16 @@ int main(int argc, char** argv) {
             }
             cout << endl;
 
-            if (trans.writeOrRead(line))
-                read = 0;
-            cache1->mainFunction(cache0, shared, binDir, read);
+            // if (trans.writeOrRead(line))
+            //     read = 0;
+            read = !trans.writeOrRead(line);
+
+            cache0->mainFunction(cache0, shared, binDir, read);
             cout << endl << "---------------------------------" << endl << endl;
         } else {
+            cout << "Core 2 working..." << endl;
             line = trans.readLine(argv[2], dataFile2);
-            cout << "File line to be processed: " <<line << endl;
+            cout << "File line to be processed: " << line << endl;
 
             binDir = trans.HexToBin(line);
             cout << "Memory Address: ";
@@ -56,15 +60,21 @@ int main(int argc, char** argv) {
             }
             cout << endl;
 
-            if (trans.writeOrRead(line))
-                read = 0;
-            cache0->mainFunction(cache1, shared, binDir, read);
+            // if (trans.writeOrRead(line))
+            //     read = 0;
+            read = !trans.writeOrRead(line);
+
+            cache1->mainFunction(cache1, shared, binDir, read);
             cout << endl << "---------------------------------" << endl << endl;
         }
     }
 
     trans.closeFile(argv[1], dataFile1);
     trans.closeFile(argv[2],dataFile2);
+
+    cout << "Core 1:\n\tHits en cache L1: " << cache0->hits  << "\n\tMisses en L1: " << cache0->misses << endl;
+    cout << "Core 2:\n\tHits en cache L1: " << cache1->hits  << "\n\tMisses en L1: " << cache1->misses << endl;
+    cout << "Cache en L2:\n\tHits: " << shared->hits << "\n\tMisses: " << shared->misses << endl;
 
     delete[] binDir;
     delete cache0;
