@@ -12,17 +12,31 @@ void CacheL1::writeExistenTag (int currentIndexL1, int currentTagL1, int current
 	int tempTag = trans.binToDec(this->memory[currentIndexL1].tag0, this->tagSize);
 
     if(tempTag == currentTagL1) {
+    	this->memory[currentIndexL1].LRU0 = 1;
+		this->memory[currentIndexL1].LRU1 = 0;
         for (int i = 0; i < 8; ++i)
 			this->memory[currentIndexL1].data0[(currentOffset * 8) + i] = 1;
 	} else {
+		this->memory[currentIndexL1].LRU0 = 0;
+		this->memory[currentIndexL1].LRU1 = 1;
 		for (int i = 0; i < 8; ++i)
 			this->memory[currentIndexL1].data1[(currentOffset * 8) + i] = 1;
 	}
 }
 
-void CacheL1::read () {
+void CacheL1::read (int tag, int index) {
 	cout << "El dato esta en Cache L1, hay un HIT!";
 	this->hits++;
+	if (trans.binToDec(this->memory[index].tag0, this->tagSize) == tag) {
+		this->memory[index].LRU0 = 1;
+		this->memory[index].LRU1 = 0;
+	}
+	else {
+	    this->memory[index].LRU0 = 0;
+		this->memory[index].LRU1 = 1;
+	}
+
+
 }
 
 char CacheL1::mesiState (int* dir) {
@@ -68,8 +82,6 @@ void CacheL1::blockFromL2(int currentIndexL1, int currentIndexL2, MPLine* L2Line
 		L2WriteL1(L2Line, binDir, 1);
 		changeMESI(currentIndexL1, newState, 1);
 	}
-
-	//FALTA REVISAR SI EL BLOQUE QUE VOY A REMPLAZAR ESTABA EN ESTADO MODIFIED.
 }
 
 void CacheL1::changeMESI(int currentIndexL1, char newState, int block) {
@@ -117,21 +129,10 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 	int currentOffset = trans.binToDec(trans.L1Offset(binDir), 5);
 
 	cout << "MESI state: " <<mesiState << endl;
-	//ver si la linea de la direccion de entrada esta en cache
-	//independientemente si es lectura o escritura
-	/*if (mesiState == 'N') { //no estaba en el cache, TAG NO COINCIDE
-		if (read) {
-			cout << "Miss de cache L1..." << endl;
-			//BUSCAR EN CACHE L2
-		}
-		//else  //write
-			//this->write(binDir);
 
-	}
-	else { //la direccion si esta en el cache, tag coincide.*/
 	if (read) {
 		if (mesiState == 'E' || mesiState == 'S' || mesiState == 'M') {
-			this->read();
+			this->read(currentTagL1, currentIndexL1);
 		} else { //Serian los casos 'N' o 'I'. Tengo que traerlo de L2 o de mem
 			//verificar si el tag esta en el otro cache y que estado tiene
 			this->misses++;
@@ -160,11 +161,11 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 				} else { //Hay un miss en el shared Hay que traer el dato de memoria principal
                     shared->misses++;
                     shared->blockFromMemory(binDir);
-                    this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'E');
+                    this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'S');
 				}
 			} else if (mesiStateOtherCache == 'M') { //Esta en el otro caché en estado Modified.
 				//Lo escribo en memoria principal
-
+				shared->write(currentIndexL2, trans.L2Tag(binDir), &cache1->memory[currentIndexL1], currentTagL1, cache1->tagSize);
 
 				//Paso su estado a Shared en other caché
 				tempTag = trans.binToDec(cache1->memory[currentIndexL1].tag0, cache1->index);
@@ -232,6 +233,7 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 				this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'S');
 			} else { //Hay un miss en el shared Hay que traer el bloque de memoria principal
                 shared->blockFromMemory(binDir);
+                shared->misses++;
                 this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'I');
 			}
 

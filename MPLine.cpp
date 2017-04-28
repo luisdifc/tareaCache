@@ -14,7 +14,7 @@ MPLine::MPLine() {
 }
 
 MPLine::~MPLine() {
-	delete [] tag;
+	delete[] tag;
 	delete[] data;
 }
 

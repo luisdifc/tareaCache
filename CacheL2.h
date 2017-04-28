@@ -24,6 +24,7 @@ public:
 
     int read (int* dir);
     void blockFromMemory (int* dir);
+    void write(int index, int* tag, TwoWaySetLine* set, int tagL1, int tagL1Size);
 
 };
 

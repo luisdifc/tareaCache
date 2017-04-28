@@ -24,7 +24,7 @@ public:
     CacheL1();
     virtual ~CacheL1();
     void writeExistenTag (int currentIndexL1, int currentTagL1, int currentOffset);
-    void read ();
+    void read (int tag, int index);
     char mesiState (int* dir);
     void blockFromL2(int currentIndexL1, int currentIndexL2, MPLine* L2Line, int* binDir, char newState);
     void L2WriteL1 (MPLine* L2Line, int* dir, int bloque);

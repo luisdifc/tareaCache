@@ -70,6 +70,7 @@ int main(int argc, char** argv) {
     delete cache0;
     delete cache1;
     delete shared;
+
 /*
 
     //buscamos estado de mesi. Si no esta devuelve 'N'

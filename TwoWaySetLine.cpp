@@ -7,6 +7,7 @@ TwoWaySetLine::TwoWaySetLine() {
 
 	MESI0 = new int[2];
 	MESI1 = new int[2];
+	//mesi 00 = I
 	for (int index = 0; index < 2; ++index) {
 		MESI0[index] = 0;
 		MESI1[index] = 0;
@@ -28,14 +29,14 @@ TwoWaySetLine::TwoWaySetLine() {
 }
 
 TwoWaySetLine::~TwoWaySetLine() {
-	delete[] MESI0;
-	delete[] MESI1;
+	// delete[] MESI0;
+	// delete[] MESI1;
 
-	delete[] tag0;
-	delete[] tag1;
+	// delete[] tag0;
+	// delete[] tag1;
 
-	delete[] data0;
-	delete[] data1;
+	// delete[] data0;
+	// delete[] data1;
 }
 
 void TwoWaySetLine::printAll() {
