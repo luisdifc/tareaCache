@@ -145,9 +145,9 @@ char Translator::binToMesi (int* mesi) {
 	if (mesi[0] == 0 && mesi[1] == 0) // 00 INVALID
 		result = 'I';
 	else if (mesi[0] == 0 && mesi[1] == 1) //01 EXCLUSIVE
-		result = 'E';
-	else if (mesi[0] == 1 && mesi[1] == 0) //10 MODIFIED
 		result = 'M';
+	else if (mesi[0] == 1 && mesi[1] == 0) //10 MODIFIED
+		result = 'E';
 	else if (mesi[0] == 1 && mesi[1] == 1) //11 SHARED
 		result = 'S';
 

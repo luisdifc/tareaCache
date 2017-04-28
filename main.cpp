@@ -46,7 +46,7 @@ int main(int argc, char** argv) {
             //     read = 0;
             read = !trans.writeOrRead(line);
 
-            cache0->mainFunction(cache0, shared, binDir, read);
+            cache0->mainFunction(cache1, shared, binDir, read);
             cout << endl << "---------------------------------" << endl << endl;
         } else {
             cout << "Core 2 working..." << endl;
@@ -64,7 +64,7 @@ int main(int argc, char** argv) {
             //     read = 0;
             read = !trans.writeOrRead(line);
 
-            cache1->mainFunction(cache1, shared, binDir, read);
+            cache1->mainFunction(cache0, shared, binDir, read);
             cout << endl << "---------------------------------" << endl << endl;
         }
     }

@@ -43,6 +43,8 @@ char CacheL1::mesiState (int* dir) {
 	int index = trans.binToDec(trans.L1Index(dir), this->index);
 	int* tag = trans.L1Tag(dir);
 
+	//cout << "Tag0 = " << trans.binToDec(this->memory[index].tag0, this->tagSize) << "\nTag1 = " << 
+	//trans.binToDec(this->memory[index].tag1, this->tagSize) << "\nCurrent tag = " << trans.binToDec(tag, this->tagSize) << endl;
 	if (trans.tagComparator(this->memory[index].tag0, tag, this->tagSize))
 		wBlock = 0;
 	else if (trans.tagComparator(this->memory[index].tag1, tag, this->tagSize))
@@ -118,7 +120,9 @@ void CacheL1::changeMESI(int currentIndexL1, char newState, int block) {
 void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int read) {
 
 	//Variables a utiliar.
+	//cout << "First" << endl;
     char mesiState = this->mesiState(binDir); //buscamos estado de mesi. Si no esta devuelve 'N'
+    //cout << "Second" << endl;
 	char mesiStateOtherCache = cache1->mesiState(binDir);
 	int tempTag;
 	int currentIndexL1 = trans.binToDec(trans.L1Index(binDir), this->index);
@@ -141,6 +145,8 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 			//si no esta en el otro cache
 			if (mesiStateOtherCache == 'N' || mesiStateOtherCache == 'I'){ //buscarlo en L2
 				if (shared->read(binDir)) { //si lo encuentra en L2. Traer bloque a L1
+
+					/////////////////////////////////////////////////////////
 					cout << "Hit en cache L2!!" << endl;
 					shared->hits++;
                     this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'E');
@@ -240,7 +246,7 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
                 shared->blockFromMemory(binDir);
                 cout << "Miss en cache L2, escritura" << endl;
                 shared->misses++;
-                this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'I');
+                this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'M');
 			}
 
             //Escribo el dato en el caché.
@@ -249,10 +255,14 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
             
             //Cambio su estado a Modified.
 			tempTag = trans.binToDec(this->memory[currentIndexL1].tag0, this->index);
+
 			if(tempTag == currentTagL1)
 				this->changeMESI(currentIndexL1, 'M', 0);
 			else
 				this->changeMESI(currentIndexL1, 'M', 1);
 		}
 	}
+
+	mesiState = this->mesiState(binDir);
+	cout << "MESI state end of process: " << mesiState << endl;
 }
