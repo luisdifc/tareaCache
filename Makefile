@@ -4,7 +4,7 @@ build:
 	g++ -std=c++11 -o main *.cpp
 	
 run:
-	./main prueba.txt prueba1.txt
+	./main prueba5_0.txt prueba5_1.txt >out.txt
 
 clean:
 	rm main
