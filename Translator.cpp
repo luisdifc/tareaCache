@@ -30,14 +30,44 @@ void Translator::openFile(char* fileName, ifstream& dataFile) {
 
 string Translator::readLine(char* fileName, ifstream& dataFile) {
 	string line;
+	string modifiedLine;
 	if (dataFile.is_open() && !dataFile.eof())
 		getline(dataFile, line);
-
-	return line;
+	//cout << sizeOfString(line) << endl;
+	modifiedLine = modifyLine(line, sizeOfString(line));
+	return modifiedLine;
 }
 
 void Translator::closeFile(char* fileName, ifstream& dataFile) {
 	dataFile.close(); //se cierra el archivo ya que no se ocupa mas
+}
+
+string Translator::modifyLine (string line, int size) {
+	//cout << line << endl;
+	int sum = 0;
+	string result(12, ' ');
+	result[0] = line[0];
+	result[1] = line[1];
+
+	for (int index = 0; index < 10; ++index){
+		if ((12 - (size + index)) >  0)
+			result[index + 2] = '0';
+		else{
+			result[index + 2] = line[2 + sum];
+			sum++;
+		}
+	}
+	//cout << result << endl;
+	return result;
+}
+
+int Translator::sizeOfString (string line) {
+	int result = 0; 
+	int index = 0;
+	while (line[result] != '\0') 
+		result++;
+	//cout << line << "\tsize: ";
+	return result;
 }
 
 int Translator::writeOrRead (string line) {

@@ -117,7 +117,7 @@ void CacheL1::changeMESI(int currentIndexL1, char newState, int block) {
 	}
 }
 
-void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int read) {
+void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int read, int& notify) {
 
 	//Variables a utiliar.
 	//cout << "First" << endl;
@@ -129,7 +129,7 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 	int currentTagL1 = trans.binToDec(trans.L1Tag(binDir), this->tagSize);
 	int currentIndexL2 = trans.binToDec(trans.L2Index(binDir), shared->indexSize);
 	int currentTagL2 = trans.binToDec(trans.L2Tag(binDir), shared->tagSize);
-	int currentOffset = trans.binToDec(trans.L1Offset(binDir), 5);
+	int currentOffset = trans.binToDec(trans.L1Offset(binDir), this->offset);
 
 	cout << "MESI state: " << mesiState << endl;
 
@@ -157,7 +157,7 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
                     this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'E');
 				}
 			} else if (mesiStateOtherCache == 'E') { //Esta en el otro cache en estado Exclusive.
-				tempTag = trans.binToDec(cache1->memory[currentIndexL1].tag0, cache1->index);
+				tempTag = trans.binToDec(cache1->memory[currentIndexL1].tag0, cache1->tagSize);
 				if(tempTag == currentTagL1) //Cambiar a estado Shared en OtherCache
 					cache1->changeMESI(currentIndexL1, 'S', 0);
 				else
@@ -180,7 +180,7 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 				cout << "Miss en cache L2!!" << endl;
                 shared->misses++;
 				//Paso su estado a Shared en other caché
-				tempTag = trans.binToDec(cache1->memory[currentIndexL1].tag0, cache1->index);
+				tempTag = trans.binToDec(cache1->memory[currentIndexL1].tag0, cache1->tagSize);
 				if(tempTag == currentTagL1)
 					cache1->changeMESI(currentIndexL1, 'S', 0);
 				else
@@ -200,7 +200,7 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 			this->writeExistenTag(currentIndexL1, currentTagL1, currentOffset);
 
 			//Cambio su estado a Modified.
-			tempTag = trans.binToDec(this->memory[currentIndexL1].tag0, this->index);
+			tempTag = trans.binToDec(this->memory[currentIndexL1].tag0, this->tagSize);
 			if(tempTag == currentTagL1)
 				this->changeMESI(currentIndexL1, 'M', 0);
 			else
@@ -210,7 +210,7 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 			this->writeExistenTag(currentIndexL1, currentTagL1, currentOffset);
 
 			//Cambio su estado a Modified.
-			tempTag = trans.binToDec(this->memory[currentIndexL1].tag0, this->index);
+			tempTag = trans.binToDec(this->memory[currentIndexL1].tag0, this->tagSize);
 			if(tempTag == currentTagL1)
 				this->changeMESI(currentIndexL1, 'M', 0);
 			else
@@ -218,7 +218,7 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 
 			//Invalido el dato en el otro caché, si estuviera.
 			if(cache1->mesiState(binDir) != 'N') {
-				tempTag = trans.binToDec(cache1->memory[currentIndexL1].tag0, this->index);
+				tempTag = trans.binToDec(cache1->memory[currentIndexL1].tag0, this->tagSize);
 				if(tempTag == currentTagL1)
 					cache1->changeMESI(currentIndexL1, 'I', 0);
 				else
@@ -230,7 +230,7 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 		} else { //Caso donde el estado sea N, es decir el tag no esta en el cacheL1
 			//Invalido el dato en el otro caché si estuviera.
 			if(mesiStateOtherCache != 'N') {
-				tempTag = trans.binToDec(this->memory[currentIndexL1].tag0, this->index);
+				tempTag = trans.binToDec(cache1->memory[currentIndexL1].tag0, this->tagSize);
 				if(tempTag == currentTagL1)
 					cache1->changeMESI(currentIndexL1, 'I', 0);
 				else
@@ -241,11 +241,11 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 			if (shared->read(binDir)) { //si lo encuentra en L2. Traer bloque a L1
 				this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'S');
 				cout << "Hit en cache L2, escritura" << endl;
-                shared->hits++;
+                //shared->hits++;
 			} else { //Hay un miss en el shared Hay que traer el bloque de memoria principal
                 shared->blockFromMemory(binDir);
                 cout << "Miss en cache L2, escritura" << endl;
-                shared->misses++;
+                //shared->misses++;
                 this->blockFromL2(currentIndexL1, currentIndexL2, &shared->memory[currentIndexL2], binDir, 'M');
 			}
 
@@ -254,7 +254,7 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 			this->writeExistenTag(currentIndexL1, currentTagL1, currentOffset);
             
             //Cambio su estado a Modified.
-			tempTag = trans.binToDec(this->memory[currentIndexL1].tag0, this->index);
+			tempTag = trans.binToDec(this->memory[currentIndexL1].tag0, this->tagSize);
 
 			if(tempTag == currentTagL1)
 				this->changeMESI(currentIndexL1, 'M', 0);
@@ -264,5 +264,20 @@ void CacheL1::mainFunction(CacheL1* cache1, CacheL2* shared, int* binDir, int re
 	}
 
 	mesiState = this->mesiState(binDir);
-	cout << "MESI state end of process: " << mesiState << endl;
+	mesiStateOtherCache = cache1->mesiState(binDir);
+
+
+	if ( ((mesiState == 'M') && (mesiStateOtherCache == 'M')) ||
+		((mesiState == 'M') && (mesiStateOtherCache == 'E')) ||
+		((mesiState == 'M') && (mesiStateOtherCache == 'S')) ||
+		((mesiState == 'E') && (mesiStateOtherCache == 'M')) ||
+		((mesiState == 'E') && (mesiStateOtherCache == 'E')) ||
+		((mesiState == 'E') && (mesiStateOtherCache == 'S')) ||
+		((mesiState == 'S') && (mesiStateOtherCache == 'M')) ||
+		((mesiState == 'S') && (mesiStateOtherCache == 'E')) )
+		notify++;
+		
+	cout << "This core MESI state at the end of the process: " << mesiState << endl;
+	cout << "Other core MESI state at the end of the process: " << mesiStateOtherCache << endl;
+
 }

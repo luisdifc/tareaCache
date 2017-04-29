@@ -33,6 +33,8 @@ public:
     int tagComparator (int* cacheTag, int* dirTag, int size);
     int writeOrRead (string line);
     char binToMesi (int* mesi);
+    int sizeOfString (string line);
+    string modifyLine (string line, int size);
 };
 
 #endif /* TRANSLATOR_H */
