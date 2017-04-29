@@ -1,10 +1,27 @@
+PRUEBA1 ?= 0
+PRUEBA2 ?= 0
+PRUEBA3 ?= 0
+PRUEBA4 ?= 0
+
+ifeq ($(PRUEBA1),1)
+	PRUEBAS = Pruebas/prueba.txt Pruebas/prueba1.txt
+else ifeq ($(PRUEBA2),1)
+	PRUEBAS = Pruebas/prueba2_0.txt Pruebas/prueba2_1.txt
+else ifeq ($(PRUEBA3),1)
+	PRUEBAS = Pruebas/prueba3_0.txt Pruebas/prueba3_1.txt
+else ifeq ($(PRUEBA4),1)
+	PRUEBAS = Pruebas/prueba4_0.txt Pruebas/prueba4_1.txt
+else
+	PRUEBAS = Pruebas/mem_trace_core1.txt Pruebas/mem_trace_core2.txt
+endif
+
 all: build run clean
 
 build:
 	g++ -std=c++11 -o main *.cpp
-	
+
 run:
-	./main prueba5_0.txt prueba5_1.txt >out.txt
+	./main $(PRUEBAS)
 
 clean:
 	rm main
