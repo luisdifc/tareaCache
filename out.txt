@@ -9966,13 +9966,3162 @@ Other core MESI state at the end of the process: N
 
 ---------------------------------
 
+Core 2 working...
+File line to be processed: 0x000FFE2A S
+Memory Address: 00000000000011111111111000101010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFE25 S
+Memory Address: 00000000000011111111111000100101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFE20 L
+Memory Address: 00000000000011111111111000100000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFE1B L
+Memory Address: 00000000000011111111111000011011
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFE16 L
+Memory Address: 00000000000011111111111000010110
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFE11 L
+Memory Address: 00000000000011111111111000010001
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFE0C L
+Memory Address: 00000000000011111111111000001100
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFE07 S
+Memory Address: 00000000000011111111111000000111
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFE02 S
+Memory Address: 00000000000011111111111000000010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDFD L
+Memory Address: 00000000000011111111110111111101
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDF8 L
+Memory Address: 00000000000011111111110111111000
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDF3 S
+Memory Address: 00000000000011111111110111110011
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDEE S
+Memory Address: 00000000000011111111110111101110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDE9 L
+Memory Address: 00000000000011111111110111101001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDE4 S
+Memory Address: 00000000000011111111110111100100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDDF S
+Memory Address: 00000000000011111111110111011111
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDDA S
+Memory Address: 00000000000011111111110111011010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDD5 L
+Memory Address: 00000000000011111111110111010101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDD0 L
+Memory Address: 00000000000011111111110111010000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDCB L
+Memory Address: 00000000000011111111110111001011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDC7 L
+Memory Address: 00000000000011111111110111000111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDC2 S
+Memory Address: 00000000000011111111110111000010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDBD S
+Memory Address: 00000000000011111111110110111101
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDB8 L
+Memory Address: 00000000000011111111110110111000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDB3 S
+Memory Address: 00000000000011111111110110110011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDAE S
+Memory Address: 00000000000011111111110110101110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDA9 L
+Memory Address: 00000000000011111111110110101001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFDA4 S
+Memory Address: 00000000000011111111110110100100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD9F L
+Memory Address: 00000000000011111111110110011111
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD9A S
+Memory Address: 00000000000011111111110110011010
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD95 L
+Memory Address: 00000000000011111111110110010101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD90 L
+Memory Address: 00000000000011111111110110010000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD8B S
+Memory Address: 00000000000011111111110110001011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD86 L
+Memory Address: 00000000000011111111110110000110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD81 L
+Memory Address: 00000000000011111111110110000001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD7C S
+Memory Address: 00000000000011111111110101111100
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD77 S
+Memory Address: 00000000000011111111110101110111
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD72 S
+Memory Address: 00000000000011111111110101110010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD6D S
+Memory Address: 00000000000011111111110101101101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD68 S
+Memory Address: 00000000000011111111110101101000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD63 L
+Memory Address: 00000000000011111111110101100011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD5E S
+Memory Address: 00000000000011111111110101011110
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD59 L
+Memory Address: 00000000000011111111110101011001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD54 S
+Memory Address: 00000000000011111111110101010100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD4F S
+Memory Address: 00000000000011111111110101001111
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD4A S
+Memory Address: 00000000000011111111110101001010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD45 S
+Memory Address: 00000000000011111111110101000101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD40 S
+Memory Address: 00000000000011111111110101000000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD3B L
+Memory Address: 00000000000011111111110100111011
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD36 L
+Memory Address: 00000000000011111111110100110110
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD31 L
+Memory Address: 00000000000011111111110100110001
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD2C S
+Memory Address: 00000000000011111111110100101100
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD27 L
+Memory Address: 00000000000011111111110100100111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD22 L
+Memory Address: 00000000000011111111110100100010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD1D L
+Memory Address: 00000000000011111111110100011101
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD18 L
+Memory Address: 00000000000011111111110100011000
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD13 S
+Memory Address: 00000000000011111111110100010011
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD0E L
+Memory Address: 00000000000011111111110100001110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD09 L
+Memory Address: 00000000000011111111110100001001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFD04 S
+Memory Address: 00000000000011111111110100000100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCFF L
+Memory Address: 00000000000011111111110011111111
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCFA L
+Memory Address: 00000000000011111111110011111010
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCF5 S
+Memory Address: 00000000000011111111110011110101
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCF0 S
+Memory Address: 00000000000011111111110011110000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCEB S
+Memory Address: 00000000000011111111110011101011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCE6 S
+Memory Address: 00000000000011111111110011100110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCE1 S
+Memory Address: 00000000000011111111110011100001
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCDC L
+Memory Address: 00000000000011111111110011011100
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCD7 L
+Memory Address: 00000000000011111111110011010111
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCD2 L
+Memory Address: 00000000000011111111110011010010
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCCD L
+Memory Address: 00000000000011111111110011001101
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCC8 S
+Memory Address: 00000000000011111111110011001000
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCC3 S
+Memory Address: 00000000000011111111110011000011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCBE L
+Memory Address: 00000000000011111111110010111110
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCB9 S
+Memory Address: 00000000000011111111110010111001
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCB4 S
+Memory Address: 00000000000011111111110010110100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCAF L
+Memory Address: 00000000000011111111110010101111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCAA S
+Memory Address: 00000000000011111111110010101010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCA5 L
+Memory Address: 00000000000011111111110010100101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFCA0 L
+Memory Address: 00000000000011111111110010100000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC9B L
+Memory Address: 00000000000011111111110010011011
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC96 L
+Memory Address: 00000000000011111111110010010110
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC91 L
+Memory Address: 00000000000011111111110010010001
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC8C L
+Memory Address: 00000000000011111111110010001100
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC87 S
+Memory Address: 00000000000011111111110010000111
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC82 S
+Memory Address: 00000000000011111111110010000010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC7D S
+Memory Address: 00000000000011111111110001111101
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC78 L
+Memory Address: 00000000000011111111110001111000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC73 L
+Memory Address: 00000000000011111111110001110011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC6E S
+Memory Address: 00000000000011111111110001101110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC69 S
+Memory Address: 00000000000011111111110001101001
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC64 L
+Memory Address: 00000000000011111111110001100100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC5F S
+Memory Address: 00000000000011111111110001011111
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC5A L
+Memory Address: 00000000000011111111110001011010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC55 S
+Memory Address: 00000000000011111111110001010101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC50 L
+Memory Address: 00000000000011111111110001010000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC4B S
+Memory Address: 00000000000011111111110001001011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC46 S
+Memory Address: 00000000000011111111110001000110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC41 L
+Memory Address: 00000000000011111111110001000001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC3C S
+Memory Address: 00000000000011111111110000111100
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC37 L
+Memory Address: 00000000000011111111110000110111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC32 S
+Memory Address: 00000000000011111111110000110010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC2D S
+Memory Address: 00000000000011111111110000101101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC28 L
+Memory Address: 00000000000011111111110000101000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC23 L
+Memory Address: 00000000000011111111110000100011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC1E S
+Memory Address: 00000000000011111111110000011110
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC19 L
+Memory Address: 00000000000011111111110000011001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC14 L
+Memory Address: 00000000000011111111110000010100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC0F S
+Memory Address: 00000000000011111111110000001111
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC0A L
+Memory Address: 00000000000011111111110000001010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC05 L
+Memory Address: 00000000000011111111110000000101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFC00 S
+Memory Address: 00000000000011111111110000000000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBFB S
+Memory Address: 00000000000011111111101111111011
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBF6 S
+Memory Address: 00000000000011111111101111110110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBF1 S
+Memory Address: 00000000000011111111101111110001
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBEC L
+Memory Address: 00000000000011111111101111101100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBE7 L
+Memory Address: 00000000000011111111101111100111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBE2 S
+Memory Address: 00000000000011111111101111100010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBDD L
+Memory Address: 00000000000011111111101111011101
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBD8 L
+Memory Address: 00000000000011111111101111011000
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBD3 S
+Memory Address: 00000000000011111111101111010011
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBCE L
+Memory Address: 00000000000011111111101111001110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBC9 L
+Memory Address: 00000000000011111111101111001001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBC4 S
+Memory Address: 00000000000011111111101111000100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBBF S
+Memory Address: 00000000000011111111101110111111
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBBA L
+Memory Address: 00000000000011111111101110111010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBB5 S
+Memory Address: 00000000000011111111101110110101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBB0 S
+Memory Address: 00000000000011111111101110110000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBAB S
+Memory Address: 00000000000011111111101110101011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBA6 L
+Memory Address: 00000000000011111111101110100110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFBA1 L
+Memory Address: 00000000000011111111101110100001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB9C S
+Memory Address: 00000000000011111111101110011100
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB97 L
+Memory Address: 00000000000011111111101110010111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB92 L
+Memory Address: 00000000000011111111101110010010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB8D L
+Memory Address: 00000000000011111111101110001101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB88 L
+Memory Address: 00000000000011111111101110001000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB83 S
+Memory Address: 00000000000011111111101110000011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB7E L
+Memory Address: 00000000000011111111101101111110
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB79 L
+Memory Address: 00000000000011111111101101111001
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB74 L
+Memory Address: 00000000000011111111101101110100
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB6F S
+Memory Address: 00000000000011111111101101101111
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB6A S
+Memory Address: 00000000000011111111101101101010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB65 L
+Memory Address: 00000000000011111111101101100101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB60 L
+Memory Address: 00000000000011111111101101100000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB5B L
+Memory Address: 00000000000011111111101101011011
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB56 L
+Memory Address: 00000000000011111111101101010110
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB51 L
+Memory Address: 00000000000011111111101101010001
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB4C S
+Memory Address: 00000000000011111111101101001100
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB47 L
+Memory Address: 00000000000011111111101101000111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB42 S
+Memory Address: 00000000000011111111101101000010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB3D L
+Memory Address: 00000000000011111111101100111101
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB38 L
+Memory Address: 00000000000011111111101100111000
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB33 L
+Memory Address: 00000000000011111111101100110011
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB2E S
+Memory Address: 00000000000011111111101100101110
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB29 L
+Memory Address: 00000000000011111111101100101001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB24 L
+Memory Address: 00000000000011111111101100100100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB1F S
+Memory Address: 00000000000011111111101100011111
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB1A S
+Memory Address: 00000000000011111111101100011010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB15 L
+Memory Address: 00000000000011111111101100010101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB10 S
+Memory Address: 00000000000011111111101100010000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB0B L
+Memory Address: 00000000000011111111101100001011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB06 L
+Memory Address: 00000000000011111111101100000110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFB01 S
+Memory Address: 00000000000011111111101100000001
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAFC S
+Memory Address: 00000000000011111111101011111100
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAF7 S
+Memory Address: 00000000000011111111101011110111
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAF2 L
+Memory Address: 00000000000011111111101011110010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAED S
+Memory Address: 00000000000011111111101011101101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAE8 S
+Memory Address: 00000000000011111111101011101000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAE3 L
+Memory Address: 00000000000011111111101011100011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFADE L
+Memory Address: 00000000000011111111101011011110
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAD9 S
+Memory Address: 00000000000011111111101011011001
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAD4 S
+Memory Address: 00000000000011111111101011010100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFACF L
+Memory Address: 00000000000011111111101011001111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFACA L
+Memory Address: 00000000000011111111101011001010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAC5 L
+Memory Address: 00000000000011111111101011000101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAC0 L
+Memory Address: 00000000000011111111101011000000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFABB S
+Memory Address: 00000000000011111111101010111011
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAB6 L
+Memory Address: 00000000000011111111101010110110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAB1 L
+Memory Address: 00000000000011111111101010110001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAAC S
+Memory Address: 00000000000011111111101010101100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAA7 S
+Memory Address: 00000000000011111111101010100111
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFAA2 S
+Memory Address: 00000000000011111111101010100010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA9D L
+Memory Address: 00000000000011111111101010011101
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA98 L
+Memory Address: 00000000000011111111101010011000
+MESI state: S
+Hit en cache L1!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA93 S
+Memory Address: 00000000000011111111101010010011
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA8E S
+Memory Address: 00000000000011111111101010001110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA89 S
+Memory Address: 00000000000011111111101010001001
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA84 L
+Memory Address: 00000000000011111111101010000100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA7F S
+Memory Address: 00000000000011111111101001111111
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA7A S
+Memory Address: 00000000000011111111101001111010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA75 S
+Memory Address: 00000000000011111111101001110101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA70 S
+Memory Address: 00000000000011111111101001110000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA6B L
+Memory Address: 00000000000011111111101001101011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA66 L
+Memory Address: 00000000000011111111101001100110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA61 L
+Memory Address: 00000000000011111111101001100001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA5C L
+Memory Address: 00000000000011111111101001011100
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA57 S
+Memory Address: 00000000000011111111101001010111
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA52 S
+Memory Address: 00000000000011111111101001010010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA4D L
+Memory Address: 00000000000011111111101001001101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA48 L
+Memory Address: 00000000000011111111101001001000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA43 L
+Memory Address: 00000000000011111111101001000011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA3E S
+Memory Address: 00000000000011111111101000111110
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA39 S
+Memory Address: 00000000000011111111101000111001
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA34 L
+Memory Address: 00000000000011111111101000110100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA2F L
+Memory Address: 00000000000011111111101000101111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA2A S
+Memory Address: 00000000000011111111101000101010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA25 S
+Memory Address: 00000000000011111111101000100101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA20 S
+Memory Address: 00000000000011111111101000100000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA1B S
+Memory Address: 00000000000011111111101000011011
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA16 L
+Memory Address: 00000000000011111111101000010110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA11 L
+Memory Address: 00000000000011111111101000010001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA0C L
+Memory Address: 00000000000011111111101000001100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA07 L
+Memory Address: 00000000000011111111101000000111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FFA02 L
+Memory Address: 00000000000011111111101000000010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9FD L
+Memory Address: 00000000000011111111100111111101
+MESI state: N
+Miss en cache L1!!
+Miss en cache L2!!
+This core MESI state at the end of the process: S
+Other core MESI state at the end of the process: S
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9F8 S
+Memory Address: 00000000000011111111100111111000
+MESI state: S
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9F3 L
+Memory Address: 00000000000011111111100111110011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9EE L
+Memory Address: 00000000000011111111100111101110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9E9 S
+Memory Address: 00000000000011111111100111101001
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9E4 L
+Memory Address: 00000000000011111111100111100100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9DF S
+Memory Address: 00000000000011111111100111011111
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9DA L
+Memory Address: 00000000000011111111100111011010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9D5 L
+Memory Address: 00000000000011111111100111010101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9D0 S
+Memory Address: 00000000000011111111100111010000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9CB S
+Memory Address: 00000000000011111111100111001011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9C6 S
+Memory Address: 00000000000011111111100111000110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9C1 L
+Memory Address: 00000000000011111111100111000001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9BC S
+Memory Address: 00000000000011111111100110111100
+MESI state: N
+Hit en cache L2, escritura
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x000FF9B7 L
+Memory Address: 00000000000011111111100110110111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100000 L
+Memory Address: 00000000000100000000000000000000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100001 L
+Memory Address: 00000000000100000000000000000001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100002 L
+Memory Address: 00000000000100000000000000000010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100003 L
+Memory Address: 00000000000100000000000000000011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100004 L
+Memory Address: 00000000000100000000000000000100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100005 L
+Memory Address: 00000000000100000000000000000101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100006 L
+Memory Address: 00000000000100000000000000000110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100007 L
+Memory Address: 00000000000100000000000000000111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100008 L
+Memory Address: 00000000000100000000000000001000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100009 L
+Memory Address: 00000000000100000000000000001001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010000A L
+Memory Address: 00000000000100000000000000001010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010000B L
+Memory Address: 00000000000100000000000000001011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010000C L
+Memory Address: 00000000000100000000000000001100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010000D L
+Memory Address: 00000000000100000000000000001101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010000E L
+Memory Address: 00000000000100000000000000001110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010000F L
+Memory Address: 00000000000100000000000000001111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100010 L
+Memory Address: 00000000000100000000000000010000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100011 L
+Memory Address: 00000000000100000000000000010001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100012 L
+Memory Address: 00000000000100000000000000010010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100013 L
+Memory Address: 00000000000100000000000000010011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100014 L
+Memory Address: 00000000000100000000000000010100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100015 L
+Memory Address: 00000000000100000000000000010101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100016 L
+Memory Address: 00000000000100000000000000010110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100017 L
+Memory Address: 00000000000100000000000000010111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100018 L
+Memory Address: 00000000000100000000000000011000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100019 L
+Memory Address: 00000000000100000000000000011001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010001A L
+Memory Address: 00000000000100000000000000011010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010001B L
+Memory Address: 00000000000100000000000000011011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010001C L
+Memory Address: 00000000000100000000000000011100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010001D L
+Memory Address: 00000000000100000000000000011101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010001E L
+Memory Address: 00000000000100000000000000011110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010001F L
+Memory Address: 00000000000100000000000000011111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100020 L
+Memory Address: 00000000000100000000000000100000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100021 L
+Memory Address: 00000000000100000000000000100001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100022 L
+Memory Address: 00000000000100000000000000100010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100023 L
+Memory Address: 00000000000100000000000000100011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100024 L
+Memory Address: 00000000000100000000000000100100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100025 L
+Memory Address: 00000000000100000000000000100101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100026 L
+Memory Address: 00000000000100000000000000100110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100027 L
+Memory Address: 00000000000100000000000000100111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100028 L
+Memory Address: 00000000000100000000000000101000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100029 L
+Memory Address: 00000000000100000000000000101001
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010002A L
+Memory Address: 00000000000100000000000000101010
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010002B L
+Memory Address: 00000000000100000000000000101011
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010002C L
+Memory Address: 00000000000100000000000000101100
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010002D L
+Memory Address: 00000000000100000000000000101101
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010002E L
+Memory Address: 00000000000100000000000000101110
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010002F L
+Memory Address: 00000000000100000000000000101111
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100030 L
+Memory Address: 00000000000100000000000000110000
+MESI state: M
+Hit en cache L1!!
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100000 S
+Memory Address: 00000000000100000000000000000000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100001 S
+Memory Address: 00000000000100000000000000000001
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100002 S
+Memory Address: 00000000000100000000000000000010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100003 S
+Memory Address: 00000000000100000000000000000011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100004 S
+Memory Address: 00000000000100000000000000000100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100005 S
+Memory Address: 00000000000100000000000000000101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100006 S
+Memory Address: 00000000000100000000000000000110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100007 S
+Memory Address: 00000000000100000000000000000111
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100008 S
+Memory Address: 00000000000100000000000000001000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100009 S
+Memory Address: 00000000000100000000000000001001
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010000A S
+Memory Address: 00000000000100000000000000001010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010000B S
+Memory Address: 00000000000100000000000000001011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010000C S
+Memory Address: 00000000000100000000000000001100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010000D S
+Memory Address: 00000000000100000000000000001101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010000E S
+Memory Address: 00000000000100000000000000001110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010000F S
+Memory Address: 00000000000100000000000000001111
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100010 S
+Memory Address: 00000000000100000000000000010000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100011 S
+Memory Address: 00000000000100000000000000010001
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100012 S
+Memory Address: 00000000000100000000000000010010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100013 S
+Memory Address: 00000000000100000000000000010011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100014 S
+Memory Address: 00000000000100000000000000010100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100015 S
+Memory Address: 00000000000100000000000000010101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100016 S
+Memory Address: 00000000000100000000000000010110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100017 S
+Memory Address: 00000000000100000000000000010111
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100018 S
+Memory Address: 00000000000100000000000000011000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100019 S
+Memory Address: 00000000000100000000000000011001
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010001A S
+Memory Address: 00000000000100000000000000011010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010001B S
+Memory Address: 00000000000100000000000000011011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010001C S
+Memory Address: 00000000000100000000000000011100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010001D S
+Memory Address: 00000000000100000000000000011101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010001E S
+Memory Address: 00000000000100000000000000011110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010001F S
+Memory Address: 00000000000100000000000000011111
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100020 S
+Memory Address: 00000000000100000000000000100000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100021 S
+Memory Address: 00000000000100000000000000100001
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100022 S
+Memory Address: 00000000000100000000000000100010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100023 S
+Memory Address: 00000000000100000000000000100011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100024 S
+Memory Address: 00000000000100000000000000100100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100025 S
+Memory Address: 00000000000100000000000000100101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100026 S
+Memory Address: 00000000000100000000000000100110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100027 S
+Memory Address: 00000000000100000000000000100111
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100028 S
+Memory Address: 00000000000100000000000000101000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100029 S
+Memory Address: 00000000000100000000000000101001
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010002A S
+Memory Address: 00000000000100000000000000101010
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010002B S
+Memory Address: 00000000000100000000000000101011
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010002C S
+Memory Address: 00000000000100000000000000101100
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010002D S
+Memory Address: 00000000000100000000000000101101
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010002E S
+Memory Address: 00000000000100000000000000101110
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x0010002F S
+Memory Address: 00000000000100000000000000101111
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
+Core 2 working...
+File line to be processed: 0x00100030 S
+Memory Address: 00000000000100000000000000110000
+MESI state: M
+This core MESI state at the end of the process: M
+Other core MESI state at the end of the process: I
+
+---------------------------------
+
 Core 1:
 	Hits en cache L1: 197
 	Misses en L1: 50
 Core 2:
-	Hits en cache L1: 21
-	Misses en L1: 7
+	Hits en cache L1: 174
+	Misses en L1: 24
 Cache en L2:
 	Hits: 2
-	Misses: 44
-Estados malos: 0
+	Misses: 61
+Combinación de estados inválidos: 0

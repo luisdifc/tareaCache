@@ -4,7 +4,7 @@ PRUEBA3 ?= 0
 PRUEBA4 ?= 0
 
 ifeq ($(PRUEBA1),1)
-	PRUEBAS = Pruebas/prueba.txt Pruebas/prueba1.txt
+	PRUEBAS = Pruebas/prueba1_0.txt Pruebas/prueba1_1.txt
 else ifeq ($(PRUEBA2),1)
 	PRUEBAS = Pruebas/prueba2_0.txt Pruebas/prueba2_1.txt
 else ifeq ($(PRUEBA3),1)
@@ -21,7 +21,7 @@ build:
 	g++ -std=c++11 -o main *.cpp
 
 run:
-	./main $(PRUEBAS)
+	./main $(PRUEBAS) >out.txt
 
 clean:
-	rm main
+	rm main 

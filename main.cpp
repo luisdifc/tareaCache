@@ -28,45 +28,49 @@ int main(int argc, char** argv) {
     cout << endl << "---------------------------------" << endl << endl;
 
     //leemos las lineas
-    for (int index = 1; !dataFile2.eof() && !dataFile1.eof(); ++index) {
+    for (int index = 1; !dataFile2.eof() || !dataFile1.eof(); ++index) {
 
         //leemos las lineas de ambos cores "en paralelo"
         if (index % 4 != 0){
-            line = trans.readLine(argv[1], dataFile1);
-            cout << "Core 1 working..." << endl;
-            cout << "File line to be processed: " << line << endl;
+            if (!dataFile1.eof()) {
+                line = trans.readLine(argv[1], dataFile1);
+                cout << "Core 1 working..." << endl;
+                cout << "File line to be processed: " << line << endl;
 
-            binDir = trans.HexToBin(line);
-            cout << "Memory Address: ";
-            for (int i = 0; i < 32; ++i) {
-                cout << binDir[i];
+                binDir = trans.HexToBin(line);
+                cout << "Memory Address: ";
+                for (int i = 0; i < 32; ++i) {
+                    cout << binDir[i];
+                }
+                cout << endl;
+
+                // if (trans.writeOrRead(line))
+                //     read = 0;
+                read = !trans.writeOrRead(line);
+
+                cache0->mainFunction(cache1, shared, binDir, read, notificacionInvalidos);
+                cout << endl << "---------------------------------" << endl << endl;
             }
-            cout << endl;
-
-            // if (trans.writeOrRead(line))
-            //     read = 0;
-            read = !trans.writeOrRead(line);
-
-            cache0->mainFunction(cache1, shared, binDir, read, notificacionInvalidos);
-            cout << endl << "---------------------------------" << endl << endl;
         } else {
-            cout << "Core 2 working..." << endl;
-            line = trans.readLine(argv[2], dataFile2);
-            cout << "File line to be processed: " << line << endl;
+            if (!dataFile2.eof()) {
+                cout << "Core 2 working..." << endl;
+                line = trans.readLine(argv[2], dataFile2);
+                cout << "File line to be processed: " << line << endl;
 
-            binDir = trans.HexToBin(line);
-            cout << "Memory Address: ";
-            for (int i = 0; i < 32; ++i) {
-                cout << binDir[i];
+                binDir = trans.HexToBin(line);
+                cout << "Memory Address: ";
+                for (int i = 0; i < 32; ++i) {
+                    cout << binDir[i];
+                }
+                cout << endl;
+
+                // if (trans.writeOrRead(line))
+                //     read = 0;
+                read = !trans.writeOrRead(line);
+
+                cache1->mainFunction(cache0, shared, binDir, read, notificacionInvalidos);
+                cout << endl << "---------------------------------" << endl << endl;
             }
-            cout << endl;
-
-            // if (trans.writeOrRead(line))
-            //     read = 0;
-            read = !trans.writeOrRead(line);
-
-            cache1->mainFunction(cache0, shared, binDir, read, notificacionInvalidos);
-            cout << endl << "---------------------------------" << endl << endl;
         }
     }
 
@@ -76,7 +80,7 @@ int main(int argc, char** argv) {
     cout << "Core 1:\n\tHits en cache L1: " << cache0->hits  << "\n\tMisses en L1: " << cache0->misses << endl;
     cout << "Core 2:\n\tHits en cache L1: " << cache1->hits  << "\n\tMisses en L1: " << cache1->misses << endl;
     cout << "Cache en L2:\n\tHits: " << shared->hits << "\n\tMisses: " << shared->misses << endl;
-    cout << "Estados malos: "  << notificacionInvalidos << endl;
+    cout << "Combinación de estados inválidos: "  << notificacionInvalidos << endl;
 
     delete[] binDir;
     delete cache0;
