@@ -3,6 +3,9 @@ PRUEBA2 ?= 0
 PRUEBA3 ?= 0
 PRUEBA4 ?= 0
 
+SOURCES = src/*.cpp
+INCLUDES = include/
+
 ifeq ($(PRUEBA1),1)
 	PRUEBAS = Pruebas/prueba1_0.txt Pruebas/prueba1_1.txt
 else ifeq ($(PRUEBA2),1)
@@ -18,7 +21,7 @@ endif
 all: build run clean
 
 build:
-	g++ -std=c++11 -o main *.cpp
+	g++ -std=c++11 -o main -I$(INCLUDES) $(SOURCES)	
 
 run:
 	./main $(PRUEBAS) >out.txt
