@@ -1,0 +1,53 @@
+*************************************************************************
+*************************************************************************
+
+			Tarea 1
+
+	Autores:	
+		Luis Diego Fernandez Coto
+		Daniel Jimenez Leon
+		José Pablo Segura
+
+*************************************************************************
+*************************************************************************
+
+	
+
+	Para compilar y correr este programa y sus diferentes pruebas se 
+	creó un documento Makefile para automatizar el proceso. Este fun-
+	ciona de la siguiente manera: 
+
+	Se tienen 4 pruebas creadas por el grupo de trabajo:
+		PRUEBA1
+		PRUEBA2
+		PRUEBA3
+		PRUEBA4
+	Dichas pruebas están documentadas en el reporte de la tarea, para
+	ejecutarlas se debe correr el comando:
+
+		root@user:~/path$ make PRUEBAX=1
+
+	Donde X es la prueba que se quiere correr, ejemplifico, para co-
+	rrer la prueba 2 se introduce el comando:
+
+		root@user:~/path$ make PRUEBA2=1
+
+	Para correr la prueba con los documentos previstos por el profesor
+	basta con correr el comando:
+
+		root@user:~/path$ make
+
+	Este por defecto recibe como argumentos los archivos previstos por
+	el profesor. Si el profesor quiere realizar pruebas adicionales 
+	puede modificar el Makefile en la línea 18 y cambiar el nombre de
+	los archivos que quiere que el programa corra, posteriormente co-
+	rrer el comando:
+
+	root@user:~/path$ make
+
+
+
+	El Makefile compila el programa y lo corre con los archivos de la
+	prueba correspondiente y crea un archivho llamado out.txt donde se
+	muestra la información correspondiente a los resultados de la prue-
+	ba.
