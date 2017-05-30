@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <ctime>
+#include <iostream>
 #include <mpi.h>
 
 using namespace std;
@@ -15,77 +16,78 @@ int main(int argc, char ** argv){
 	rc = MPI_Init(&argc, &argv);
 
 	/********** Create and populate the array **********/
-	int n = atoi(argv[1]);
-	int *original_array = (int*) malloc(n * sizeof(int));
+	int amountNumbers = atoi(argv[1]);
+	int *unsortedArrayArray = (int*) malloc(amountNumbers * sizeof(int));
 	
-	int c;
 	srand(time(NULL));
-	//printf("This is the unsorted array: ");
-	for(c = 0; c < n; c++) {
-		
-		original_array[c] = rand() % n;
-		//printf("%d ", original_array[c]);
-		
-		}
+	//printf("This is the unsortedArray array: ");
+	for(int index = 0; index < amountNumbers; index++) {	
+		unsortedArrayArray[index] = rand() % amountNumbers;
+		//printf("%d ", unsortedArrayArray[c]);		
+	}
 
 	//printf("\n");
 	//printf("\n");
 	
 	/********** Initialize MPI **********/
 
-	int world_rank;
-	int world_size;
+	int rank;
+	int amountProcesses;
 
-	MPI_Comm_size(MPI_COMM_WORLD, &world_size);
-	MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+	MPI_Comm_size(MPI_COMM_WORLD, &amountProcesses);
+	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-	//printf("\nworld_size: %d\n", world_size);
-	//printf("\nId: %d\n", world_rank);
+	//printf("\namountProcesses: %d\n", amountProcesses);
+	//printf("\nId: %d\n", rank);
 		
 	/********** Divide the array in equal-sized chunks **********/
-	int size = n/world_size;
+	int size = amountNumbers/amountProcesses;
 	
 	/********** Send each subarray to each process **********/
 	clock_t begin = clock(); //se inicia un clock
-	int *sub_array = (int*) malloc(size * sizeof(int));
-	MPI_Scatter(original_array, size, MPI_INT, sub_array, size, MPI_INT, 0, MPI_COMM_WORLD);
+
+	int *subArray = (int*) malloc(size * sizeof(int));
+	MPI_Scatter(unsortedArrayArray, size, MPI_INT, subArray, size, MPI_INT, 0, MPI_COMM_WORLD);
 	
 	/********** Perform the mergesort on each process **********/
-	int *tmp_array = (int*) malloc(size * sizeof(int));
+	int *tempArray = (int*) malloc(size * sizeof(int));
 	
-	mergeSort(sub_array, tmp_array, 0, (size - 1));
+	mergeSort(subArray, tempArray, 0, (size - 1));
 	
 	
-	/********** Gather the sorted subarrays into one **********/
-	int *sorted = NULL;
-	if(world_rank == 0) {
+	/********** Gather the sortedArray subarrays into one **********/
+	int *sortedArray = NULL;
+	if(rank == 0) {
 		
-		sorted = (int*) malloc(n * sizeof(int));
+		sortedArray = (int*) malloc(amountNumbers * sizeof(int));
 		
 		}
 	
-	MPI_Gather(sub_array, size, MPI_INT, sorted, size, MPI_INT, 0, MPI_COMM_WORLD);
+	MPI_Gather(subArray, size, MPI_INT, sortedArray, size, MPI_INT, 0, MPI_COMM_WORLD);
 
 	
 
 	
 	/********** Make the final mergeSort call **********/
-	if(world_rank == 0) {
+	if(rank == 0) {
 		
-		int *other_array = (int*) malloc(n * sizeof(int));
-		mergeSort(sorted, other_array, 0, (n - 1));
+		int *temp2Array = (int*) malloc(amountNumbers * sizeof(int));
+		mergeSort(sortedArray, temp2Array, 0, (amountNumbers - 1));
+
+
+	/********** INFO **********/
 		clock_t end = clock(); //se inicia otro clock
 
+		float totalTime = (1000 * (end - begin)) / CLOCKS_PER_SEC;
+
+		cout << "Processes: " << amountProcesses << endl;
+		cout << "Time: " << totalTime << "ms" << endl;
 		
-		float total_time = (1000 * (end - begin)) / CLOCKS_PER_SEC;
-		printf("Processes: %d\n", world_size);
-		printf ("Time: %f ms\n", total_time);
-		
-		/********** Display the sorted array **********/
-		// printf("This is the sorted array: ");
+		/********** Display the sortedArray array **********/
+		// printf("This is the sortedArray array: ");
 		// for(c = 0; c < n; c++) {
 			
-		// 	printf("%d ", sorted[c]);
+		// 	printf("%d ", sortedArray[c]);
 			
 		// 	}
 			
@@ -93,15 +95,15 @@ int main(int argc, char ** argv){
 		// printf("\n");
 			
 		/********** Clean up root **********/
-		free(sorted);
-		free(other_array);
+		free(sortedArray);
+		free(temp2Array);
 			
 		}
 	
 	/********** Clean up rest **********/
-	free(original_array);
-	free(sub_array);
-	free(tmp_array);
+	free(unsortedArrayArray);
+	free(subArray);
+	free(tempArray);
 	
 	/********** Finalize MPI **********/
 	MPI_Barrier(MPI_COMM_WORLD);
@@ -118,54 +120,32 @@ void merge(int *a, int *b, int l, int m, int r) {
 	j = m + 1;
 	
 	while((h <= m) && (j <= r)) {
-		
 		if(a[h] <= a[j]) {
-			
 			b[i] = a[h];
 			h++;
-			
-			}
-			
-		else {
-			
+		} else {
 			b[i] = a[j];
 			j++;
-			
-			}
-			
-		i++;
-		
-		}
+		}	
+		i++;	
+	}
 		
 	if(m < h) {
-		
 		for(k = j; k <= r; k++) {
-			
 			b[i] = a[k];
 			i++;
-			
-			}
-			
-		}
-		
-	else {
-		
+		}	
+	} else {
 		for(k = h; k <= m; k++) {
-			
 			b[i] = a[k];
 			i++;
-			
-			}
-			
-		}
-		
-	for(k = l; k <= r; k++) {
-		
-		a[k] = b[k];
-		
-		}
-		
+		}	
 	}
+		
+	for(k = l; k <= r; k++) 
+		a[k] = b[k];
+
+}
 
 /********** Recursive Merge Function **********/
 void mergeSort(int *a, int *b, int l, int r) {
@@ -173,13 +153,10 @@ void mergeSort(int *a, int *b, int l, int r) {
 	int m;
 	
 	if(l < r) {
-		
 		m = (l + r)/2;
 		
 		mergeSort(a, b, l, m);
 		mergeSort(a, b, (m + 1), r);
 		merge(a, b, l, m, r);
-		
-		}
-		
 	}
+}
