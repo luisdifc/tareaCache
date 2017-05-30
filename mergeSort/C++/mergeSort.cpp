@@ -10,18 +10,17 @@ void merge(int arr[], int l, int m, int r);
 void mergeSort(int arr[], int l, int r);
 
 int main(int argc, char ** argv){
-
     int rc, id, procs;
     int amountNumbers = atoi(argv[1]);
 
-    rc = MPI_Init(&argc, &argv);
+    // rc = MPI_Init(&argc, &argv);
 
-    MPI_Status stat;
+    // MPI_Status stat;
 
-    MPI_Comm_size(MPI_COMM_WORLD, &procs);
-    MPI_Comm_rank(MPI_COMM_WORLD, &id);
+    // MPI_Comm_size(MPI_COMM_WORLD, &procs);
+    // MPI_Comm_rank(MPI_COMM_WORLD, &id);
 
-    cout << "Proceso numero: " << id << " de: " << procs << endl << endl;
+    // cout << "\nProceso numero: " << id << " de: " << procs << endl << endl;
 
     int* array;
 
@@ -37,6 +36,15 @@ int main(int argc, char ** argv){
         cout << endl;
     }
 
+    rc = MPI_Init(&argc, &argv);
+
+    MPI_Status stat;
+
+    MPI_Comm_size(MPI_COMM_WORLD, &procs);
+    MPI_Comm_rank(MPI_COMM_WORLD, &id);
+
+    // cout << "\nProceso numero: " << id << " de: " << procs << endl << endl;
+
     int size = amountNumbers/procs;
     int* sub_array = new int[size];
 
@@ -47,15 +55,20 @@ int main(int argc, char ** argv){
 
     MPI_Gather(sub_array, size, MPI_INT, array, amountNumbers, MPI_INT, 0, MPI_COMM_WORLD);
 
+    MPI_Barrier(MPI_COMM_WORLD);
+
     if(id == 0) {
         mergeSort(array, 0, amountNumbers - 1);
-
+        cout << "\nProceso numero: " << id << " de: " << procs << endl << endl;
         cout << endl << "Arreglo ordenado: " << endl;
         //impresion del arreglo ordenado
         for(int index = 0; index < amountNumbers; index++) 
             cout << array[index] << " ";
         cout << endl;
     }
+
+    MPI_Finalize(); 
+
     return 0;
 }
 
