@@ -1,6 +1,8 @@
-/* C program for Merge Sort */
 #include <iostream>
- 
+#include <cstdlib>
+#include <mpi.h>
+
+
 using namespace std;
 
 void merge(int arr[], int l, int m, int r);
@@ -8,24 +10,52 @@ void merge(int arr[], int l, int m, int r);
 void mergeSort(int arr[], int l, int r);
 
 int main(int argc, char ** argv){
+
+    int rc, id, procs;
     int amountNumbers = atoi(argv[1]);
 
-    //CREACION DEL ARRAY CON NUMEROS ALEATORIOS
-    int* array = new int[amountNumbers];
-    for(int index = 0; index < amountNumbers; index++) {
-        array[index] = rand() % amountNumbers;
-        cout << array[index] << " ";        
+    rc = MPI_Init(&argc, &argv);
+
+    MPI_Status stat;
+
+    MPI_Comm_size(MPI_COMM_WORLD, &procs);
+    MPI_Comm_rank(MPI_COMM_WORLD, &id);
+
+    cout << "Proceso numero: " << id << " de: " << procs << endl << endl;
+
+    int* array;
+
+    if(id == 0) {
+        //CREACION DEL ARRAY CON NUMEROS ALEATORIOS
+        array = new int[amountNumbers];
+
+        cout << "Arreglo a ordenar: " << endl;
+        for(int index = 0; index < amountNumbers; index++) {
+            array[index] = rand() % amountNumbers;
+            cout << array[index] << " ";        
+        }
+        cout << endl;
     }
-    cout << endl;
+
+    int size = amountNumbers/procs;
+    int* sub_array = new int[size];
+
+    MPI_Scatter(array, amountNumbers, MPI_INT, sub_array, size, MPI_INT, 0, MPI_COMM_WORLD);
 
     //ordenamiento
-    mergeSort(array, 0, amountNumbers-1);
+    mergeSort(sub_array, 0, size - 1);
 
-    //impresion del arreglo ordenado
-    for(int index = 0; index < amountNumbers; index++) 
-        cout << array[index] << " ";        
-    cout << endl;
+    MPI_Gather(sub_array, size, MPI_INT, array, amountNumbers, MPI_INT, 0, MPI_COMM_WORLD);
 
+    if(id == 0) {
+        mergeSort(array, 0, amountNumbers - 1);
+
+        cout << endl << "Arreglo ordenado: " << endl;
+        //impresion del arreglo ordenado
+        for(int index = 0; index < amountNumbers; index++) 
+            cout << array[index] << " ";
+        cout << endl;
+    }
     return 0;
 }
 
