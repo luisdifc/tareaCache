@@ -1,0 +1,68 @@
+*************************************************************************
+*************************************************************************
+
+
+			            TAREA 2 
+
+	Autores:	                        Carné:
+		Luis Diego Fernandez Coto           B22492
+		Daniel Jimenez Leon                 B23467
+		José Pablo Segura                   B46603
+
+
+*************************************************************************
+*************************************************************************
+
+    
+    PAQUETES A INSTALAR
+
+    Es necesario instalar ciertos paquetes para que se pueda hacer uso de
+    OpenMPI y poder correr el programa.
+
+    Para ejecutar el programa se creo un makefile que facilita el proceso.
+    Dentro del makefile hay una opcion para instalar los paquetes,
+    esta se corre mediante:
+
+        make install    
+
+    Como alternativa, se puede utilizar la siguiente linea para instalar 
+    todos los paquetes (esto desde la consola):
+
+	    sudo apt-get install openmpi-common openmpi-bin openmpi-doc libopenmpi* mpich
+
+  |-----------------------------------------------------------------------|
+  |  IMPORTANTE: esto funciona correctamente para cualquier distribucion  |
+  |             de Debian (especificamente fue probada en Ubuntu).        |
+  |-----------------------------------------------------------------------|
+
+
+*************************************************************************
+*************************************************************************
+
+
+    EJECUCION DEL PROGRAMA
+
+    El makefile, descrito anteriormente, recibe dos argumetos los cuales 
+    son el numero de cores con los cuales se desea correr el programa y 
+    ademas el numero de datos que se desan generar aleatoreamente para 
+    ordenar. Por lo tanto se debe correr de la siguiente forma:
+
+        make CORES=2 DATA=10000
+
+    Estos valores son simplemente para ejemplificar. No se recomienda correr 
+    con una cantidad de datos muy alta porque puede ocacionar problemas al 
+    ordenador (esto dependiendo de las capacidades del mismo). Si se 
+    corre solo el make, los valores por defecto son CORES=1 y DATA=1000000.
+
+    Ademas las salidas del programa se generan en un archivo "out.txt" el 
+    cual se debe encontrar en la misma carpeta en la cual se ubica el
+    makefile y el codigo.
+
+    El makefile cuenta ademas con la opcion de "clean" para limpiar los 
+    archivos generados (el ejecutable y el out.txt). Esto se corre mediante:
+
+        make clean
+
+
+*************************************************************************
+*************************************************************************
