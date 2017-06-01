@@ -1,8 +1,8 @@
 CORES ?= 1
-DATA ?= 1000000
+DATA ?= 100000
 
 SOURCES = main.cpp
-MPI_ARGS = -np 1
+MPI_ARGS = -np 4
 
 
 all: build run 

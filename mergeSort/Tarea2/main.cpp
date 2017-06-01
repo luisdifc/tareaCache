@@ -14,17 +14,17 @@ int main(int argc, char ** argv){
 
     //Declaración de variables.
     int rc, amountNumbers, rank, amountProcesses, sizeSubArrays;
-    int *unsortedArrayArray, *subArray, *tempArray, *sortedArray, *temp2Array; 
+    int *unsortedArray, *subArray, *tempArray, *sortedArray, *temp2Array; 
 
     //Inicializacion del ambiente de MPI. 	
 	rc = MPI_Init(&argc, &argv);
 
 	//Arreglo desordenado con numeros generados aleatoreamente.
 	amountNumbers = atoi(argv[1]);
-	unsortedArrayArray = (int*) malloc(amountNumbers * sizeof(int));
+	unsortedArray = (int*) malloc(amountNumbers * sizeof(int));
     srand(time(NULL));
 	for(int index = 0; index < amountNumbers; index++) {	
-		unsortedArrayArray[index] = rand() % amountNumbers;
+		unsortedArray[index] = rand() % amountNumbers;
 	}
 
     //Obtengo el numero de procesos y un identificador para cada uno de ellos.
@@ -41,7 +41,7 @@ int main(int argc, char ** argv){
 	subArray = (int*) malloc(sizeSubArrays * sizeof(int));
 
     //Funcion que separa el arreglo desordenado y le asigna una seccion a cada core.
-	MPI_Scatter(unsortedArrayArray, sizeSubArrays, MPI_INT, subArray, sizeSubArrays, MPI_INT, 0, MPI_COMM_WORLD);
+	MPI_Scatter(unsortedArray, sizeSubArrays, MPI_INT, subArray, sizeSubArrays, MPI_INT, 0, MPI_COMM_WORLD);
 	
 	//Arrego temporal para obtener los sub arreglos ordenados de cada core.
     tempArray = (int*) malloc(sizeSubArrays * sizeof(int));
@@ -63,12 +63,30 @@ int main(int argc, char ** argv){
         //Marca de tiempo para medicion de fin de ejecucion.
 		clock_t end = clock();
 
-        //Se obtiene el tiempo de ejecucion.
-		float totalTime = (1000 * (end - begin)) / CLOCKS_PER_SEC;
-
-        //Impresion de resultados.
+		//impresion de la cantidad de procesos utilizados.
 		cout << "Processes: " << amountProcesses << endl;
-		cout << "Time: " << totalTime << "ms" << endl;
+
+        //Se obtiene el tiempo de ejecucion y se imprime.
+		float totalTime = (1000 * (end - begin)) / CLOCKS_PER_SEC;
+		if (totalTime == 0) { 
+			totalTime = (1000000 * (end - begin)) / CLOCKS_PER_SEC;
+			cout << "Sorting time: " << totalTime << "\u00B5s" << endl;
+		}
+		else
+			cout << "Sorting time: " << totalTime << "ms" << endl;
+		
+
+		//Impresion del arreglo NO ordenado
+		cout << "\nUnsorted array: ";
+		for (int index = 0; index < amountNumbers; index++)
+			cout << unsortedArray[index] << " ";
+		cout << endl;
+
+		//Impresion del arreglo ordenado
+		cout << "\nSorted array: ";
+		for (int index = 0; index < amountNumbers; index++)
+			cout << sortedArray[index] << " ";
+		cout << endl;
 		
 		//Liberacion de memoria reservada.
         free(sortedArray);
@@ -77,7 +95,7 @@ int main(int argc, char ** argv){
 		}
 	
 	//Liberacion de memoria reservada.
-    free(unsortedArrayArray);
+    free(unsortedArray);
 	free(subArray);
 	free(tempArray);
 	
