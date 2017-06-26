@@ -1,0 +1,7 @@
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install mercurial scons swig gcc m4 python python-dev libgoogle-perftools-dev g++
+http://repo.gem5.org/gem5
+scons build/ARM/gem5.opt -j2
+sudo apt-get install protobuf-compiler
+sudo apt-get install zlib1g-dev
